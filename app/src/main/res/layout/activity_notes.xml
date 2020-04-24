@@ -29,6 +29,14 @@
                 android:layout_height="wrap_content">
 
             </TextView>
+            <Button
+                android:layout_below="@id/dashboard"
+                android:background="@drawable/addicon"
+                android:id="@+id/add_buttom"
+                android:layout_width="50dp"
+                android:onClick="insert"
+                android:layout_height="50dp">
+            </Button>
 
             <ImageView
                 android:layout_alignParentRight="true"
@@ -36,6 +44,42 @@
                 android:layout_height="140dp"
                 android:src="@drawable/notesicon"></ImageView>
         </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/new_note_linear"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_height="1dp">
+
+            <EditText
+                android:id="@+id/title_notes"
+                android:layout_width="match_parent"
+                android:hint="Title"
+                android:textSize="20sp"
+                android:layout_height="40dp"/>
+
+            <EditText
+                android:id="@+id/contain_notes"
+                android:layout_width="match_parent"
+                android:hint="Details"
+                android:textSize="20sp"
+                android:layout_height="100dp"/>
+
+            <Button
+                android:text="Add"
+                android:id="@+id/insert"
+                android:layout_width="100dp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="add"
+                android:layout_height="50dp">
+            </Button>
+
+        </LinearLayout>
+
+
+
+
 
         <GridView
             android:numColumns="auto_fit"
@@ -43,13 +87,16 @@
             android:columnCount="2"
             android:padding="20dp"
             android:verticalSpacing="10dp"
-            android:horizontalSpacing="10dp"
-            android:stretchMode="columnWidth"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/grid"
             />
+
+
+
     </LinearLayout>
+
+
 
 
 
