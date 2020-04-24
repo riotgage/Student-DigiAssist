@@ -9,7 +9,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".AddProject"></activity>
+        <activity android:name=".AddTask" />
+        <activity android:name=".AddExpense" />
+        <activity android:name=".Blank">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
