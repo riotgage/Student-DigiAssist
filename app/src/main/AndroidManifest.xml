@@ -9,11 +9,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".competition.Alerts"></activity>
-=======
+
+
         <activity android:name=".notes"></activity>
->>>>>>> d6ab662f91a03b2a81f019bb39ba3d63c75cef5a
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
