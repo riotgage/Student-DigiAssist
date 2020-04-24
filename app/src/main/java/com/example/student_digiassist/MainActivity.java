@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.example.student_digiassist.competition.Alerts;
 
+
 public class MainActivity extends AppCompatActivity {
 
     CardView alerts;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         alerts=findViewById(R.id.alerts);
 
@@ -27,5 +29,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void notesScreen(View view) {
+        startActivity(new Intent(MainActivity.this, notes.class));
     }
 }
