@@ -73,6 +73,7 @@ public class notes extends AppCompatActivity {
         String c = contain.getText().toString();
         if(t!= ""&&c!="")
         {
+
                 title_list.add(0,t);
                 contain_list.add(0,c);
                 shapes.add(3);
