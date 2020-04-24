@@ -64,6 +64,7 @@
                 android:background="@color/colorPrimary"
                 app:cardElevation="60dp"
                 app:cardCornerRadius="12dp"
+                android:onClick="notesScreen"
                 android:layout_margin="12dp">
                 <LinearLayout
                     android:orientation="vertical"
