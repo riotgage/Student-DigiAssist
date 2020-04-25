@@ -92,6 +92,7 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 app:cardElevation="60dp"
+                android:id="@+id/reminder"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
                 <LinearLayout

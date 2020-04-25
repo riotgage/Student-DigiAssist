@@ -9,12 +9,13 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddProject"></activity>
+        <activity android:name=".reminder.SetReminder"></activity>
+        <activity android:name=".reminder.Reminders" />
+        <activity android:name=".AddProject" />
         <activity android:name=".AddTask" />
         <activity android:name=".AddExpense" />
-
-        <activity android:name=".competition.Alerts"></activity>
-        <activity android:name=".notes"></activity>
+        <activity android:name=".competition.Alerts" />
+        <activity android:name=".notes" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
