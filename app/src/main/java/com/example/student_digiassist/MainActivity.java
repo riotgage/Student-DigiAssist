@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void notesScreen(View view) {
-        startActivity(new Intent(MainActivity.this, notes.class));
+        startActivity(new Intent(MainActivity.this, Alerts.class));
     }
+
+
 }
