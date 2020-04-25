@@ -123,6 +123,7 @@
                 android:layout_rowWeight="1"
                 app:cardElevation="60dp"
                 app:cardCornerRadius="12dp"
+                android:onClick="expensescreenb"
                 android:layout_margin="12dp">
                 <LinearLayout
                     android:orientation="vertical"

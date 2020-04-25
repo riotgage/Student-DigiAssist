@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
+
 import java.util.List;
 
 public class CustomGrid extends BaseAdapter{
@@ -54,24 +57,24 @@ public class CustomGrid extends BaseAdapter{
 
         if (convertView == null) {
 
-            grid = new View(mContext);
+//            grid = new View(mContext);
             grid = inflater.inflate(R.layout.grid, null);
             TextView textView = (TextView) grid.findViewById(R.id.grid_text);
-            LinearLayout li = (LinearLayout) grid.findViewById(R.id.layoutsize);
-             textView.setText(title.get(position));
-            if(shapes.get(position) == 1)
-                li.setBackgroundResource(R.drawable.shape);
-            else if(shapes.get(position) ==2)
-                li.setBackgroundResource(R.drawable.shape2);
-            else
-                li.setBackgroundResource(R.drawable.shape3);
-
-            if(position == loc)
+            textView.setText(title.get(position));
+            LinearLayout li  = (LinearLayout) grid.findViewById(R.id.card_view);
+            if(shapes.get(position) == 4)
             {
-                textView.setText(containst);
-                textView.setTextSize(15);
-                li.setBackgroundResource(R.drawable.shape4);
+                li.setBackgroundColor(Color.parseColor("#CCCC00"));
             }
+            else if(shapes.get(position) == 5)
+            {
+                li.setBackgroundColor(Color.parseColor("#00FF00"));
+            }
+            else if(shapes.get(position) == 6)
+            {
+                li.setBackgroundColor(Color.parseColor("#FF0000"));
+            }
+
 
         } else {
             grid = (View) convertView;
