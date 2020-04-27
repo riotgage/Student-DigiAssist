@@ -27,4 +27,8 @@ public class MainActivity extends AppCompatActivity {
     public void expensescreenb(View view) {
         startActivity(new Intent(MainActivity.this, AddExpense.class));
     }
+
+    public void reminderhome(View view) {
+        startActivity(new Intent(MainActivity.this, MainPage.class));
+    }
 }
