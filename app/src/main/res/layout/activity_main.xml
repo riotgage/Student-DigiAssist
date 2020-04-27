@@ -154,6 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:id="@+id/attendance"
                 app:cardElevation="60dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">

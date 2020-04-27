@@ -9,12 +9,14 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddProject"></activity>
+        <activity android:name=".Attendance.AddAttendance"></activity>
+        <activity android:name=".Attendance.Attendances" />
+        <activity android:name=".AddProject" />
         <activity android:name=".AddTask" />
         <activity android:name=".AddExpense" />
         <activity android:name=".MainPage" />
-        <activity android:name=".competition.Alerts"></activity>
-        <activity android:name=".notes"></activity>
+        <activity android:name=".competition.Alerts" />
+        <activity android:name=".notes" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".NotifierAlarm"/>
+
+        <receiver android:name=".NotifierAlarm" />
     </application>
 
 </manifest>
