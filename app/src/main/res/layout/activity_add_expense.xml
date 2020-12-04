@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".AddExpense">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="50dp">
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="https://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            card_view:cardBackgroundColor="#ffffff"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp"
+            android:padding="2dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/card_view"
+                    android:layout_width="120dp"
+                    android:weightSum="4"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#ffffff"
+                        android:text="You Owe : "
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:background="#CCCC00"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#ffffff"
+                        android:id="@+id/grid_text"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Expense Details:"
+            android:textSize="20dp"></TextView>
+
+        <EditText
+            android:id="@+id/details"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Expense Details"></EditText>
+
+        <TextView
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Expense Amount:"
+            android:textSize="20dp"></TextView>
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Expense Amount"></EditText>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:onClick="insert"
+            android:text="Submit"
+            android:textSize="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"></Button>
+
+        <GridView
+            android:numColumns="auto_fit"
+            android:gravity="center_horizontal"
+            android:columnCount="2"
+            android:padding="20dp"
+            android:verticalSpacing="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/grid"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

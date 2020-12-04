@@ -5,7 +5,6 @@ import android.media.Image;
 import java.util.Date;
 
 public class Competition {
-
     String website,comp_name,link;
     String date;
     int thumb;

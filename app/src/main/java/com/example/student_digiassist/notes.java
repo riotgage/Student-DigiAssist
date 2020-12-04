@@ -53,16 +53,30 @@ public class notes extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Toast.makeText(notes.this, "You Clicked at " + title_list.get(+position), Toast.LENGTH_SHORT).show();
-                CustomGrid adapter = new CustomGrid(notes.this, title_list,shapes,position,contain_list.get(position));
-                grid.setAdapter(adapter);
+                title.setText(title_list.get(position));
+                contain.setText(contain_list.get(position));
+                ViewGroup.LayoutParams params = li.getLayoutParams();
+                params.height = 600;
+                li.setLayoutParams(params);
             }
         });
     }
 
     public void insert(View view) {
+
         ViewGroup.LayoutParams params = li.getLayoutParams();
-        params.height = 600;
-        li.setLayoutParams(params);
+        if(params.height != 600)
+        {
+            params.height = 600;
+            li.setLayoutParams(params);
+        }
+        else
+        {
+            params.height = 1;
+            li.setLayoutParams(params);
+
+        }
+
     }
 
     public void add(View view) {
@@ -73,10 +87,22 @@ public class notes extends AppCompatActivity {
         String c = contain.getText().toString();
         if(t!= ""&&c!="")
         {
+            for(int i = 0;i<title_list.size();i++)
+            {
+                if(title_list.get(i).equals(t))
+                {
+                    title_list.set(i, t);
+                    contain_list.set(i, c);
+                    shapes.add(3);
+                    CustomGrid adapter = new CustomGrid(notes.this, title_list,shapes,-1,"");
+                    grid.setAdapter(adapter);
+                    Toast.makeText(notes.this, "Updated", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+            }
 
-                title_list.add(0,t);
-                contain_list.add(0,c);
-                shapes.add(3);
+            title_list.add(0,t);
+            contain_list.add(0,c);
             CustomGrid adapter = new CustomGrid(notes.this, title_list,shapes,-1,"");
             grid.setAdapter(adapter);
             Toast.makeText(notes.this, "Inserted", Toast.LENGTH_SHORT).show();

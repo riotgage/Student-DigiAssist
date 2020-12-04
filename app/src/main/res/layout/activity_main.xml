@@ -94,25 +94,29 @@
                 app:cardElevation="60dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
+
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="16dp"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:onClick="reminderhome"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
                     <ImageView
-                        android:src="@drawable/calendar"
                         android:layout_width="80dp"
-                        android:layout_height="80dp">
-                    </ImageView>
+                        android:layout_height="80dp"
+                        android:clickable="false"
+                        android:onClick="reminderhome"
+                        android:src="@drawable/calendar"></ImageView>
 
                     <TextView
-                        android:textColor="@color/colorPrimaryDark"
-                        android:text="Reminders"
-                        android:textSize="15sp"
-                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Reminders"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp"></TextView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -123,6 +127,7 @@
                 android:layout_rowWeight="1"
                 app:cardElevation="60dp"
                 app:cardCornerRadius="12dp"
+                android:onClick="expensescreenb"
                 android:layout_margin="12dp">
                 <LinearLayout
                     android:orientation="vertical"
@@ -149,6 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:id="@+id/attendance"
                 app:cardElevation="60dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
