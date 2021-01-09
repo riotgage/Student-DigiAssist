@@ -1,2 +1,2 @@
-rootProject.name='Student-DigiAssist'
+rootProject.name='NoteBin'
 include ':app'
